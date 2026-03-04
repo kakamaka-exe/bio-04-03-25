@@ -24,7 +24,6 @@
             position: relative;
         }
 
-        /* ANIMATED BACKGROUND */
         .bg-canvas {
             position: fixed;
             inset: 0;
@@ -116,7 +115,6 @@
             100% { opacity: 0; transform: translateY(-120px) translateX(var(--drift, 30px)); }
         }
 
-        /* LAYOUT */
         .container {
             position: relative;
             z-index: 1;
@@ -153,7 +151,6 @@
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* LIQUID GLASS CARD */
         .card {
             position: relative;
             border-radius: 28px;
@@ -200,7 +197,6 @@
             pointer-events: none;
         }
 
-        /* Restored the hover and fade-in animation! */
         .card:hover {
             transform: translateY(-6px);
         }
@@ -209,7 +205,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* TYPOGRAPHY */
         .section-number {
             font-family: 'Cormorant Garamond', serif;
             font-size: 0.75em;
@@ -223,7 +218,7 @@
 
         h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2em;
+            font-size: 1.8em;
             font-weight: 400;
             color: #ffffff;
             letter-spacing: 0.02em;
@@ -248,7 +243,6 @@
             font-weight: 300;
         }
 
-        /* MIND MAP NODES & TREE */
         .mindmap-wrapper {
             display: flex;
             flex-direction: column;
@@ -256,7 +250,6 @@
             margin-top: 40px;
         }
 
-        /* Central Root Node */
         .mindmap-root {
             position: relative;
             padding: 16px 36px;
@@ -277,7 +270,6 @@
             z-index: 2;
         }
 
-        /* Golden line dropping down from root */
         .mindmap-root::after {
             content: '';
             position: absolute;
@@ -296,7 +288,6 @@
             z-index: 1;
         }
 
-        /* Desktop View (Tree layout) */
         @media (min-width: 800px) {
             .mindmap-branches {
                 display: flex;
@@ -308,7 +299,6 @@
                 position: relative;
             }
 
-            /* Vertical line dropping from the horizontal track down to the card */
             .mindmap-branch::before {
                 content: '';
                 position: absolute;
@@ -321,7 +311,6 @@
                 box-shadow: 0 0 8px rgba(201,168,76,0.6);
             }
 
-            /* Horizontal track spanning perfectly from the center of one card to the center of the next */
             .mindmap-branch:not(:last-child)::after {
                 content: '';
                 position: absolute;
@@ -334,7 +323,6 @@
             }
         }
 
-        /* Mobile View (Vertical stacked layout) */
         @media (max-width: 799px) {
             .mindmap-branches {
                 display: flex;
@@ -347,7 +335,6 @@
                 position: relative;
             }
 
-            /* Connect first card up to the root */
             .mindmap-branch:first-child::before {
                 content: '';
                 position: absolute;
@@ -360,7 +347,6 @@
                 box-shadow: 0 0 8px rgba(201,168,76,0.6);
             }
 
-            /* Connect the rest of the cards vertically across the gaps */
             .mindmap-branch:not(:first-child)::before {
                 content: '';
                 position: absolute;
@@ -417,7 +403,6 @@
             margin: 0;
         }
 
-        /* TABLE */
         .table-wrap {
             margin-top: 28px;
             border-radius: 18px;
@@ -468,7 +453,6 @@
             background: rgba(255,255,255,0.025);
         }
 
-        /* DIVIDER */
         .divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
@@ -502,14 +486,14 @@
 
         <div class="card">
             <span class="section-number">01, Foundation</span>
-            <h2>Explaining Prof. Dr. Dieter Vollhardt's statement</h2>
-            <p>In everyday language, "theory" usually means a guess. In science, though, a theory is a well-tested explanation backed by a large body of evidence. Calling evolution "just" a theory misses this point entirely, as it is one of the most thoroughly tested ideas in all of science.</p>
+            <h2>Explain the statement: Evolution is 'just' a theory</h2>
+            <p>In everyday life, a "theory" is usually just a guess. But in science, a theory is a tested explanation with a lot of proof behind it. Saying evolution is "just" a theory is wrong, because it is one of the most tested ideas in science.</p>
         </div>
 
         <div class="card">
             <span class="section-number">02, Context</span>
-            <h2>Influences on Darwin's Theory</h2>
-            <p>Darwin did not come up with his theory alone. Several scientists from his time gave him key ideas that helped shape his thinking.</p>
+            <h2>Illustrate the influences that reinforced Charles Darwin's path to his theory</h2>
+            <p>Darwin did not create his theory by himself. Other scientists gave him important ideas.</p>
 
             <div class="mindmap-wrapper">
                 <div class="mindmap-root">Darwin's Theory of Evolution</div>
@@ -518,21 +502,21 @@
                     <div class="mindmap-branch">
                         <div class="mindmap-node">
                             <div class="mindmap-title">Geology & Deep Time</div>
-                            <p>James Hutton showed that landforms are shaped by slow, gradual processes over very long periods of time. Charles Lyell added that these same processes have been happening throughout Earth's entire history. This led Darwin to believe the Earth was much older than 6,000 years, giving life enough time to slowly change and evolve.</p>
+                            <p>James Hutton and Charles Lyell showed that the Earth changes very slowly over millions of years. This made Darwin realize the Earth is extremely old. This gave enough time for living things to slowly change.</p>
                         </div>
                     </div>
 
                     <div class="mindmap-branch">
                         <div class="mindmap-node">
                             <div class="mindmap-title">Populations & Competition</div>
-                            <p>Thomas Malthus argued that populations grow faster than their food supply, so living things are always competing to survive. Darwin took this idea and applied it to all animals and plants, seeing competition as the main force behind which individuals survive and pass on their traits.</p>
+                            <p>Thomas Malthus said there are always more people than food, so people have to compete to live. Darwin used this idea for plants and animals. He saw that competing helps decide which ones survive and have babies.</p>
                         </div>
                     </div>
 
                     <div class="mindmap-branch">
                         <div class="mindmap-node">
                             <div class="mindmap-title">Fossils & Paleontology</div>
-                            <p>Georges Cuvier showed that the history of life on Earth is recorded in layers of rock containing fossils. Finding evidence of animals and plants that no longer exist made it hard to believe life had always stayed the same, giving Darwin strong support for the idea that species change over time.</p>
+                            <p>Georges Cuvier found fossils in old rocks. These fossils were from animals that do not exist anymore. This proved to Darwin that life on Earth changes over time.</p>
                         </div>
                     </div>
                 </div>
@@ -541,7 +525,7 @@
 
         <div class="card">
             <span class="section-number">03, Comparison</span>
-            <h2>Lamarck vs. Darwin</h2>
+            <h2>Compare the theories of Lamarck and Darwin</h2>
 
             <div class="table-wrap">
                 <table>
@@ -552,26 +536,26 @@
                     </tr>
                     <tr>
                         <td>How Change Happens</td>
-                        <td>Using a body part often makes it bigger and stronger, while not using it causes it to shrink over generations.</td>
-                        <td>Small natural differences between individuals mean some are better at surviving and more likely to pass on their traits.</td>
+                        <td>Using a body part makes it stronger. Not using it makes it shrink.</td>
+                        <td>Some animals are born with helpful traits. This makes them more likely to survive and have babies.</td>
                     </tr>
                     <tr>
                         <td>The Giraffe Example</td>
-                        <td>Generations of giraffes kept stretching their necks to reach higher branches, so necks slowly grew longer over time.</td>
-                        <td>Giraffes born with longer necks could reach more food, so they survived better and had more offspring.</td>
+                        <td>Giraffes stretched their necks to reach high leaves. Over time, their necks grew longer.</td>
+                        <td>Giraffes born with longer necks reached more food. They survived and had more babies with long necks.</td>
                     </tr>
                     <tr>
                         <td>What Gets Passed On</td>
-                        <td>Changes that happen to a body during a lifetime get passed down to children.</td>
-                        <td>Only traits that are already in the genes can be passed on to the next generation.</td>
+                        <td>Changes made during an animal's life are passed to its babies.</td>
+                        <td>Only traits in the animal's DNA can be passed to its babies.</td>
                     </tr>
                 </table>
             </div>
 
             <div class="divider"></div>
 
-            <h3>Why Darwin's Theory Prevailed</h3>
-            <p>Lamarck's theory was rejected because science showed that changes to a body during a lifetime do not change a person's genes, so those changes cannot be passed on to children. A blacksmith may build up strong arms over years of hard work, but his children are not born with stronger arms because of it. Darwin's explanation matched how genes and inheritance actually work, and was later backed up by the discovery of DNA.</p>
+            <h3>Explain what led to Darwin's theory being accepted, while Lamarck's theory of evolution was rejected</h3>
+            <p>Scientists rejected Lamarck's idea. Getting strong muscles from working hard during your life does not change your DNA, so your babies will not be born with strong muscles. Darwin's idea was accepted because it matches how genes and DNA actually work.</p>
         </div>
         <footer class="footer">Made by Angelo &nbsp;·&nbsp; 04/03/2026</footer>
     </div>
